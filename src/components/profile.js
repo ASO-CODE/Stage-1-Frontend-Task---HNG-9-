@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import ProfileImg from "../images/profile__img.png";
-import ShareMobile from "../images/_Avatar share button1.svg";
-import ShareDesktop from "../images/_Avatar share button.svg";
+import ShareMobile from "../images/Avatar share button1.svg";
+import ShareDesktop from "../images/Avatar share button.svg";
 import CameraIcon from "../images/camera-01.svg";
 
 const Profile = () => {
