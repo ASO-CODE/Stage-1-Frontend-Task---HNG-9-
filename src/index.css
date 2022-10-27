@@ -3,23 +3,38 @@
 :root {
   --profile-text: #101828;
   --link-text: #101828;
-  --link-bcg: #EAECF0;
-  --link-bcg-hover: #D0D5DD;
-  --link-visited: 1px solid #D0D5DD;
+  --link-bcg: #eaecf0;
+  --link-bcg-hover: #d0d5dd;
+  --link-visited: 1px solid #d0d5dd;
+  --footer-text: #667085;
+  --img-overlay: rgba(52, 64, 84, 0.75);
 }
 
-h1{
+h1 {
   font-weight: 600;
   font-size: 1.125rem;
+  color: var(--profile-text);
 }
 
-a{
+a {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875rem;
+  text-decoration: none;
+  color: var(--link-text);
 }
 
-@media screen and () {
-  
+p {
+  font-size: 0.875rem;
+  color: var(--footer-text);
+}
+
+@media screen and (min-width: 760px) {
+  a {
+    font-size: 1.125rem;
+  }
+  p {
+    font-size: 1rem;
+  }
 }
 
 * {
@@ -35,7 +50,130 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.App {
+  padding: 4rem 1rem 2rem 1rem;
+  height: 100vh;
+}
+
+#Profile {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.share {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.profile {
+  text-align: center;
+  padding-bottom: 3.5rem;
+}
+
+.img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--img-overlay);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.img-overlay:hover {
+  opacity: 1;
+}
+
+.img-overlay img {
+  transform: translateY(60px);
+}
+
+#twitter {
+  margin-top: 1.5rem;
+}
+
+#slack {
+  display: none;
+}
+
 #links {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.link{
+height: 70px;
+background: var(--link-bcg);
+width: 100%;
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom:24px;
+border-radius: 5px;
+transition: all 0.5s;
+}
+
+.link:hover{
+  background: var(--link-bcg-hover);
+}
+
+.socials{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  margin-bottom: 7rem;
+}
+
+.socials img:first-of-type{
+  margin-right:1.5rem ;
+}
+
+.footer-line{
+  width: 100%;
+  height: 1px;
+  background: var(--link-bcg);
+}
+
+.logos{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding:30px 0 ;
+}
+
+.logos img{
+  max-width:187px ;
+  padding: 1rem 0;
+}
+
+@media screen and (min-width: 768px) {
+.App{
+  padding: 4rem 7rem 3rem 7rem;
+}
+
+  #Profile{
+    width: 80%;
+  }
+
+  .logos{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }

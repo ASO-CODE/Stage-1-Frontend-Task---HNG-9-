@@ -11,7 +11,7 @@ const Footer = () => {
           <img src={SlackImg} alt="slack img" />
           <img src={GithubImg} alt="github img" />
         </div>
-        <hr />
+        <div className="footer-line"/>
         <div className="logos">
           <img src={ZuriLogo} alt="zuri logo" />
                 <p>HNG Internship 9 Frontend Task</p>

@@ -6,7 +6,7 @@ const Links = () => {
       {LinksData.map((link) => {
         const { id, text, url } = link;
         return (
-          <a href={url} key={id} id={id}>
+          <a className="link" href={url} key={id} id={id}>
             {text}
           </a>
         );
